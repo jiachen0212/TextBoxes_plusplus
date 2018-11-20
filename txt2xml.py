@@ -41,7 +41,8 @@ def txtToXml(image_path, txt_path):
             node2 = SubElement(obj, 'content')
             node3 = SubElement(obj, 'name')
             node4 = SubElement(obj, 'bnbox')
-            node1.text = '1'
+            # node1.text = '1'  
+            node1.text = '0' 
             node2.text = '###'
             node3.text = 'text'
             x1 = SubElement(node4, 'x1')
