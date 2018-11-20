@@ -68,14 +68,6 @@ def txtToXml(image_path, txt_path):
             xmax.text = str(max(int(x1.text), int(x2.text), int(x3.text), int(x4.text)))
             ymax = SubElement(node4, 'ymax')
             ymax.text = str(max(int(y1.text), int(y2.text), int(y3.text), int(y4.text)))
-            if xmax.text < xmin.text:
-                tmpx = xmin.text
-                xmin.text = xmax.text
-                xmax.text = tmpx
-            if ymax.text < ymin.text:
-                tmpy = ymin.text
-                ymin.text = ymax.text
-                ymax.text = tmpy
 
         xml = tostring(node_root, pretty_print=True)  #格式化显示，该换行的换行
         dom = parseString(xml)
